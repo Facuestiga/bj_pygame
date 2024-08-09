@@ -16,6 +16,8 @@ class Deck:
         
 
     def deal(self):
-        if len(self.cards) > 1:
+        if len(self.cards) > 0:
             return self.cards.pop()
+        else :
+            return None
             

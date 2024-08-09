@@ -8,7 +8,8 @@ class Hand(Deck):
         self.value = 0 
 
     def add_card(self, card):
-        self.cards.append(card)
+        if card is not None :
+            self.cards.append(card)
 
     def calc_hand(self):
         first_card_index = [a_card[0] for a_card in self.cards]
@@ -26,6 +27,7 @@ class Hand(Deck):
                 self.value += 11
             else:
                 self.value += 1
+        return self.value
 
 
     def display_cards(self):

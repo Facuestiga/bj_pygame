@@ -23,7 +23,9 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            pos = pygame.mouse.get_pos()
+            print(pos)
         button(screen, "Deal", 30, 100, 150, 50, LIGHT_SLAT, DARK_SLAT, play_blackjack.deal)
         button(screen, "Hit", 30, 200, 150, 50, LIGHT_SLAT, DARK_SLAT, play_blackjack.hit)
         button(screen, "Stand", 30, 300, 150, 50, LIGHT_SLAT, DARK_SLAT, play_blackjack.stand)
